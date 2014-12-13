@@ -47,23 +47,78 @@
 // p
 // 	+jpg(bla)
 
-
+html, body
+	height: 100%
+	
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
 
+.out
+	min-width: 320px
+	background: #ed1970
+	height: 100%
+	min-height: 500px
 
-// common blocks      
+.onleft
+	float: left	
+.onright
+	float: right
+	
+.is-hidden
+	display: none 	
+	
+// fonts
++font(Quadon-Light, Quadon-Light)
++font(Proximanova-Regular, Proximanova-Regular)
++font(Proximanova-Light, Proximanova-Light)
++font(Proximanova-Semibold, Proximanova-Semibold)
 
+=quad
+	font-family: "Quadon-Light", Georgia, serif   
+=proxima
+	font-family: "Proximanova-Regular", Arial, sans-serif
+=proxima-l
+	font-family: "Proximanova-Light", Arial, sans-serif
+=proxima-sb
+	font-family: "Proximanova-Semibold", Arial, sans-serif
 
+// buttons
+.btn
+	height: 56px 
+	padding: 0 35px
+	text-transform: uppercase
+	font-size: 16px	
+	color: #FFF
+	background: none 
+	border: 2px solid #fff
+	border-radius: 5px
+	+proxima  
+	&:active
+		position: relative
+		top: 1px
 
+.icon
+	display: inline-block
+	vertical-align: middle
 
-
-
-
-
-
+.nav_ico
+	+s(nav)	
+.logo_ico
+	+s(logo_ico)
+.cart_ico
+	+s(cart)
+.call_ico
+	+s(call)	
+.search_ico
+	+s(search)	
+.close_ico
+	+s(close)
+.info_ico
+	+s(info)
+.cost_ico
+	+s(cost)
 
 
 

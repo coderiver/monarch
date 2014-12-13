@@ -1,8 +1,11 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	//menu
+	$('.js-menu').click(function() {
+		$('.menu').addClass('is-active');
+	});
 
-	console.log($('body').html());
+	$('.js-close').click(function() {
+		$('.menu').removeClass('is-active');
+	});
 });
