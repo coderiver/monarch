@@ -4,6 +4,10 @@
 	height: 100% 
 	overflow: hidden
 	+vertical
+	+r(1150)
+		text-align: left
+	+r(1024)
+		height: auto 	
 
 .inside
 	display: inline-block
@@ -32,7 +36,31 @@
 		margin-top: 50px
 		font-size: 0
 		.btn
-			margin-right: 15px	
+			margin: 0 8px
+	+r(1250)
+		max-width: 950px 
+	+r(1024)
+		padding-top: 100px 
+		&__logo
+			float: none
+			text-align: center
+			margin-bottom: 50px 
+		&__txt
+			float: none
+			width: 100%
+			text-align: center
+		&__ttl
+			font-size: 50px	
+		.btn
+			margin-bottom: 20px 
+	+r(400)
+		&__logo
+			img
+				width: 95.5% 		
+		&__ttl
+			font-size: 40px
+			margin-bottom: 25px  		
+
 
 .nav
 	position: fixed //TODO OVERFLOW
@@ -58,7 +86,47 @@
 		position: absolute
 		width: 100% 
 		bottom: 0
-		padding: 30px 0			
+		padding: 30px 0	
+	.info
+		display: none 		
+	+r(1024)
+		width: auto
+		min-width: 320px
+		min-height: 0
+		bottom: inherit
+		left: 0 	
+		+clr
+		a
+			display: inline-block 
+			margin-bottom: 0 
+			padding: 0 15px
+			line-height: 75px
+		.tooltip
+			display: none 	
+		&__top
+			float: right
+			padding: 0
+		&__bottom
+			position: static
+			float: left
+			width: auto 			
+			padding: 0 	
+		.info
+			position: static
+			display: block 	
+			float: left
+			padding: 0 
+			a
+				&:first-child
+					margin-right: 0 
+	+r(480)
+		a
+			padding: 0 10px
+	+r(400)
+		.info
+			display: none 				
+			
+		 	
 
 .tooltip
 	visibility: hidden 
@@ -87,13 +155,14 @@
 	top: 0
 	right: 0
 	bottom: 0
-	width: 330px
+	width: 320px
 	padding: 25px
 	background: #fff
 	text-align: center	
 	font-size: 16px
 	z-index: 2
 	box-sizing: border-box
+	overflow: auto
 	+transition(transform 0.3s)
 	+transform(translateX(100%))
 	+proxima-l
@@ -104,7 +173,7 @@
 		margin-bottom: 30px 
 		text-align: right 
 	&__list
-		margin: 60px 0 75px
+		margin-top: 60px
 		a
 			display: block 
 			padding: 12px 0 
@@ -118,7 +187,9 @@
 			&.product
 				text-transform: none 
 			&:hover
-				color: #ed1970 	
+				color: #ed1970 		
+	&__bottom
+		margin-top: 75px 						
 	&__b
 		position: relative
 		display: block 		
@@ -153,4 +224,6 @@
 		display: inline-block
 		&:first-child
 			margin-right: 15px 
+	+r(1024)
+		display: none 		
 	
