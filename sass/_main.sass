@@ -1,35 +1,51 @@
 // Normally mainpage styles
 .inner
 	position: relative
-	height: 100% 
+	height: 100%
 	overflow: hidden
 	+vertical
+	&.is-auto
+		font-size: inherit
+		height: auto
+		&:before
+			display: none
 	+r(1150)
 		text-align: left
 	+r(1024)
-		height: auto 	
+		height: auto
+		// &.is-fixed //TODO OVERLAY ON MOBILE WHEN MENU IS OPENED
+		// 	position: fixed
+		// 	&:after
+		// 		content: ""
+		// 		position: absolute
+		// 		display: block
+		// 		top: 0
+		// 		left: 0
+		// 		right: 0
+		// 		bottom: 0
+		// 		background: rgba(0,0,0, 0.5)
 
 .inside
 	display: inline-block
-	width: 100% 
+	width: 100%
 	padding: 20px
 	max-width: 1040px
 	vertical-align: middle
 	box-sizing: border-box
 	+clr
 	&__logo
-		display: block 
-		padding-top: 20px 
+		display: block
+		padding-top: 20px
 	&__txt
-		width: 550px 
+		width: 550px
 		text-align: left
 		font-size: 16px
-		color: #FFF  
+		color: #FFF
 		letter-spacing: 1.25px
-		+proxima 
-	&__ttl	 
+		+proxima
+	&__ttl
 		margin-bottom: 50px
-		font-size: 63px 
+		font-size: 63px
 		letter-spacing: 5px
 		+quad
 	&__btn
@@ -38,28 +54,28 @@
 		.btn
 			margin: 0 8px
 	+r(1250)
-		max-width: 950px 
+		max-width: 950px
 	+r(1024)
-		padding-top: 100px 
+		padding-top: 100px
 		&__logo
 			float: none
 			text-align: center
-			margin-bottom: 50px 
+			margin-bottom: 50px
 		&__txt
 			float: none
 			width: 100%
 			text-align: center
 		&__ttl
-			font-size: 50px	
+			font-size: 50px
 		.btn
-			margin-bottom: 20px 
+			margin-bottom: 20px
 	+r(400)
 		&__logo
 			img
-				width: 95.5% 		
+				width: 95.5%
 		&__ttl
 			font-size: 40px
-			margin-bottom: 25px  		
+			margin-bottom: 25px
 
 
 .nav
@@ -71,94 +87,94 @@
 	min-height: 500px
 	background: #fff
 	z-index: 1
+	&.is-grey
+		background: #efefee
 	a
 		position: relative
 		display: block
-		margin: 0 auto 40px  
+		margin: 0 auto 40px
 		text-align: center
 		&:hover
 			.tooltip
-				visibility: visible 
+				visibility: visible
 				+opacity(1)
 	&__top
-		padding: 30px 0	
+		padding: 30px 0
 	&__bottom
 		position: absolute
-		width: 100% 
+		width: 100%
 		bottom: 0
-		padding: 30px 0	
+		padding: 30px 0
 	.info
-		display: none 		
+		display: none
 	+r(1024)
 		width: auto
 		min-width: 320px
 		min-height: 0
 		bottom: inherit
-		left: 0 	
+		left: 0
 		+clr
 		a
-			display: inline-block 
-			margin-bottom: 0 
+			display: inline-block
+			margin-bottom: 0
 			padding: 0 15px
 			line-height: 75px
 		.tooltip
-			display: none 	
+			display: none
 		&__top
 			float: right
 			padding: 0
 		&__bottom
 			position: static
 			float: left
-			width: auto 			
-			padding: 0 	
+			width: auto
+			padding: 0
 		.info
 			position: static
-			display: block 	
+			display: block
 			float: left
-			padding: 0 
+			padding: 0
 			a
 				&:first-child
-					margin-right: 0 
+					margin-right: 0
 	+r(480)
 		a
 			padding: 0 10px
 	+r(400)
 		.info
-			display: none 				
-			
-		 	
+			display: none
 
 .tooltip
-	visibility: hidden 
+	visibility: hidden
 	position: absolute
-	min-width: 50px // TODO TAKE CONTENT AND CHANGE SIZE ACCORDING TO CONTENT FOR TOOLTIP TO BE IN ON STRING
 	top: 50%
 	right: 100%
 	margin: -20px 20px 0 0
 	padding: 2px 15px 0
 	background: #FFF
-	color: #ed1970  
-	font-size: 16px 
+	color: #ed1970
+	font-size: 16px
 	line-height: 2.5
-	+proxima 	
+	white-space: nowrap
+	+proxima
 	+opacity(0)
 	+transition(visibility 0.3s, opacity 0.3s)
 	&:after
-		content: ""	
+		content: ""
 		position: absolute
 		top: 0
 		left: 100%
 		+arr(20, 42, #fff, r)
 
 .menu
-	position: fixed
+	position: fixed // TODO JUMPING ON ANDROID, WTF?
 	top: 0
 	right: 0
 	bottom: 0
 	width: 320px
 	padding: 25px
 	background: #fff
-	text-align: center	
+	text-align: center
 	font-size: 16px
 	z-index: 2
 	box-sizing: border-box
@@ -167,63 +183,69 @@
 	+transform(translateX(100%))
 	+proxima-l
 	&.is-active
-		+transform(translateX(0))	
+		+transform(translateX(0))
+	&.is-grey
+		background: #EFEFEE
 	&__close
-		display: block 
-		margin-bottom: 30px 
-		text-align: right 
+		display: block
+		margin-bottom: 30px
+		text-align: right
 	&__list
 		margin-top: 60px
 		a
-			display: block 
-			padding: 12px 0 
+			display: block
+			padding: 12px 0
 			text-transform: uppercase
 			text-decoration: none
-			color: #87898B 
-			line-height: 1.45 
+			color: #87898B
+			line-height: 1.45
 			letter-spacing: 3.5px
 			span
-				color: #ed1970 
+				color: #ed1970
 			&.product
-				text-transform: none 
+				text-transform: none
 			&:hover
-				color: #ed1970 		
+				color: #ed1970
 	&__bottom
-		margin-top: 75px 						
+		margin-top: 75px
 	&__b
 		position: relative
-		display: block 		
+		display: block
 		padding: 18px 0
 		text-transform: uppercase
 		text-decoration: none
-		color: #ed1970  
+		color: #ed1970
 		letter-spacing: 3.5px
-		line-height: 2.5 
+		line-height: 2.5
 		i
 			position: absolute
 			left: 0
 		input
+			margin-left: 10px
 			padding: 0 15px
 			height: 40px
 			box-sizing: border-box
-			+proxima-l	
+			+proxima-l
 		.search_ico
-			margin-left: 5px 
+			margin-left: 5px
 		.call_ico
-			margin-left: 2px 		
+			margin-left: 2px
 	.is-semibold
-		+proxima-sb	
-		
+		+proxima-sb
+
 .info
-	position: absolute
+	position: fixed
 	top: 85%
 	background: #fff
 	padding: 15px
-	font-size: 0 
+	font-size: 0
+	&.is-grey
+		background: #F3F5F6
 	a
 		display: inline-block
 		&:first-child
-			margin-right: 15px 
+			margin-right: 15px
 	+r(1024)
-		display: none 		
-	
+		display: none
+		&.is-grey
+			background: #EFEFEE

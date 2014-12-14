@@ -9,6 +9,15 @@ head.ready(function() {
 		$('.menu').removeClass('is-active');
 	});
 
+	// var windowsize = $(window).width();
+
+	// $(window).resize(function() {
+	// 	windowsize = $(window).width();
+	// 		if (windowsize < 1025) {
+	// 			$('.inner').addClass('is-fixed');
+	// 		}
+	// });
+
 	// function scrollFixedElements() {
 	//     var scroll_left = $(this).scrollLeft();
 	//     $(".fixed-element").css({
@@ -19,5 +28,5 @@ head.ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
-	
+
 });
