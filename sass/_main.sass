@@ -77,7 +77,6 @@
 			font-size: 40px
 			margin-bottom: 25px
 
-
 .nav
 	position: fixed //TODO OVERFLOW
 	top: 0
@@ -94,6 +93,7 @@
 		display: block
 		margin: 0 auto 40px
 		text-align: center
+		-webkit-tap-highlight-color: transparent
 		&:hover
 			.tooltip
 				visibility: visible
@@ -140,7 +140,7 @@
 	+r(480)
 		a
 			padding: 0 10px
-	+r(400)
+	+r(410)
 		.info
 			display: none
 
@@ -167,7 +167,7 @@
 		+arr(20, 42, #fff, r)
 
 .menu
-	position: fixed // TODO JUMPING ON ANDROID, WTF?
+	position: fixed // TODO JUMPING IN Chrome, WTF?
 	top: 0
 	right: 0
 	bottom: 0
@@ -190,6 +190,7 @@
 		display: block
 		margin-bottom: 30px
 		text-align: right
+		-webkit-tap-highlight-color: transparent
 	&__list
 		margin-top: 60px
 		a
@@ -200,6 +201,7 @@
 			color: #87898B
 			line-height: 1.45
 			letter-spacing: 3.5px
+			-webkit-tap-highlight-color: transparent
 			span
 				color: #ed1970
 			&.product
@@ -208,6 +210,7 @@
 				color: #ed1970
 	&__bottom
 		margin-top: 75px
+		padding-bottom: 25px
 	&__b
 		position: relative
 		display: block
@@ -217,6 +220,7 @@
 		color: #ed1970
 		letter-spacing: 3.5px
 		line-height: 2.5
+		-webkit-tap-highlight-color: transparent
 		i
 			position: absolute
 			left: 0

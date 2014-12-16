@@ -3,14 +3,17 @@
 	display: block
 	width: 100%
 	margin: 0 auto
-	padding: 0 20px
+	padding: 175px 20px 15px
 	text-align: left
 	color: #A7AAAC
 	box-sizing: border-box
 	+proxima
 	&.s-width
 		max-width: 890px
-		padding: 175px 20px 15px
+	&.m-width
+		max-width: 935px
+	&.txt-white
+		color: #FFF
 	&__ttl
 		position: relative
 		margin-bottom: 70px
@@ -18,6 +21,14 @@
 		font-size: 63px
 		text-transform: uppercase
 		+quad
+		&.is-white
+			color: #FFF
+	.ttl_ico
+		content: ""
+		position: absolute
+		display: block
+		top: 19px
+		left: -127px
 	&__img
 		background: #fff
 		width: 242px
@@ -34,6 +45,45 @@
 			width: 242px
 			font-size: 13px
 			letter-spacing: 1.1px
+	&__item
+		+clr
+		.table__ttl
+			text-transform: uppercase
+			margin-bottom: 30px
+			font-size: 15px
+		.table
+			width: 100%
+			font-size: 15px
+			border-top: 2px solid #fff
+			border-bottom: 2px solid #fff
+			.row
+				&:first-child
+					text-transform: uppercase
+			.cell
+				padding: 25px 0
+				&:first-child
+					width: 40%
+				&.txt-right
+					padding-right: 5%
+	.total
+		margin-top: 30px
+		width: 263px
+		border: 0
+		text-transform: uppercase
+		.row
+			&:last-child
+				.cell
+					padding-top: 25px
+					+proxima-b
+		.cell
+			padding: 5px 0
+			&:first-child
+				width: 55%
+			&.txt-right
+				padding-right: 20%
+
+	.trash_ico
+		padding-right: 10px
 	&__name
 		text-align: right
 		font-size: 36px
@@ -51,6 +101,8 @@
 			min-width: 177px
 			&:first-child
 				margin-bottom: 10px
+		&.with-margin
+			margin-top: 72px
 	&__input
 		margin-right: 25px
 		font-size: 18px
@@ -84,14 +136,28 @@
 				&:first-child
 					width: 21%
 					color: #ed1970
+	+r(1150)
+		&__ttl
+			p
+				overflow: hidden
+		.ttl_ico
+			position: static
+			float: left
+			margin: 20px 30px 0 0
 	+r(720)
+		.ttl_ico
+			display: none
 		&__input
 			float: none
 			margin: 0 0 20px 0
 	+r(565)
 		&__ttl
-			font-size: 40px
 			text-align: center
+			font-size: 37px
+		.ttl_ico
+			display: block
+			float: none
+			margin: 0 auto 10px
 		&__bl
 			div
 				float: none

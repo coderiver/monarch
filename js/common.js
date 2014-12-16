@@ -3,10 +3,12 @@ head.ready(function() {
 	//menu
 	$('.js-menu').click(function() {
 		$('.menu').addClass('is-active');
+		return false;
 	});
 
 	$('.js-close').click(function() {
 		$('.menu').removeClass('is-active');
+		return false;
 	});
 
 	// var windowsize = $(window).width();
