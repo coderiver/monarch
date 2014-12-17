@@ -28,7 +28,7 @@
 		position: absolute
 		display: block
 		top: 19px
-		left: -127px
+		left: -115px
 	&__img
 		background: #fff
 		width: 242px
@@ -51,39 +51,28 @@
 			text-transform: uppercase
 			margin-bottom: 30px
 			font-size: 15px
+			letter-spacing: 1.1px
 		.table
-			width: 100%
+			display: table-cell 
 			font-size: 15px
 			border-top: 2px solid #fff
 			border-bottom: 2px solid #fff
+			&.is-first
+				width: 42%
+			&.is-last
+				.cell
+					padding: 20px 0	
+			&.txt-right
+				text-align: right	
 			.row
 				&:first-child
 					text-transform: uppercase
 			.cell
-				padding: 25px 0
-				&:first-child
-					width: 40%
-				&.txt-right
-					padding-right: 5%
-	.total
-		margin-top: 30px
-		width: 263px
-		border: 0
-		text-transform: uppercase
-		.row
-			&:last-child
-				.cell
-					padding-top: 25px
-					+proxima-b
-		.cell
-			padding: 5px 0
-			&:first-child
-				width: 55%
-			&.txt-right
-				padding-right: 20%
-
-	.trash_ico
-		padding-right: 10px
+				padding: 22px 0
+				&.txt-up
+					text-transform: uppercase				
+		.trash_ico
+			padding-right: 10px
 	&__name
 		text-align: right
 		font-size: 36px
@@ -136,6 +125,25 @@
 				&:first-child
 					width: 21%
 					color: #ed1970
+	.total
+		display: table 
+		margin-top: 30px
+		width: 32%
+		text-transform: uppercase
+		font-size: 15px 
+		letter-spacing: 1.1px
+		.row
+			display: table-row 
+			&:last-child
+				.cell
+					padding-top: 25px
+					+proxima-b
+		.cell
+			display: table-cell 
+			padding: 5px 0
+			&.txt-right
+				text-align: right
+				padding-right: 20%				
 	+r(1150)
 		&__ttl
 			p
@@ -144,12 +152,44 @@
 			position: static
 			float: left
 			margin: 20px 30px 0 0
+	+r(930)
+		&__item
+			.table	
+				font-size: 13px  
+		.total
+			font-size: 13px 		
 	+r(720)
 		.ttl_ico
 			display: none
+		.table__ttl
+			text-align: center
 		&__input
 			float: none
 			margin: 0 0 20px 0
+		&__item
+			.table	
+				display: block
+				width: 50% 
+				margin: 0 auto
+				padding: 0 5%
+				text-align: center	
+				border-bottom: 0 
+				box-sizing: border-box
+				&.is-first
+					width: 50%
+				&.txt-right
+					text-align: center	
+				.row
+					display: block 	 
+				.cell
+					display: block 
+					padding: 15px 0
+		.total
+			float: none
+			width: 50%
+			margin: 30px auto 0
+			padding-top: 15px
+			border-top: 2px solid #fff	
 	+r(565)
 		&__ttl
 			text-align: center
@@ -174,6 +214,19 @@
 		&__btn
 			.btn
 				margin: 0 auto
+	+r(480)		
+		&__item
+			.table
+				width: 100% 
+				&.is-first
+					width: 100% 
+		.total
+			width: 100% 	
+			.cell
+				&.txt-right
+					padding-right: 10% 		
+		.btn
+			float: none			
 
 
 
