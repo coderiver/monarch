@@ -40,6 +40,8 @@
 	&__bl
 		margin-bottom: 25px
 		+clr
+		&.s-margin
+			margin-bottom: 40px 
 		&.m-margin
 			margin-bottom: 70px
 		.table
@@ -48,6 +50,22 @@
 			letter-spacing: 1.1px
 	&__item
 		+clr
+		&.txt-pink
+			border-bottom: 1px solid #ed1970 
+			.table
+				color: #ed1970
+				border: 0
+				.row
+					position: relative
+					display: block 
+					&:before
+						content: ""
+						position: absolute
+						height: 1px
+						left: 0
+						right: 0						 
+						bottom: 0
+						background: #a7a9ac	
 		.table__ttl
 			text-transform: uppercase
 			margin-bottom: 30px
@@ -126,7 +144,7 @@
 				&:first-child
 					width: 21%
 					color: #ed1970
-	+r(1150)
+	+r(1250)
 		&__ttl
 			p
 				overflow: hidden
@@ -137,6 +155,9 @@
 	+r(720)
 		.table__ttl
 			text-align: center
+		&__bl
+			&.m-margin
+				margin-bottom: 50px 		
 		&__input
 			float: none
 			margin: 0 0 20px 0
@@ -158,6 +179,12 @@
 				.cell
 					display: block
 					padding: 15px 0
+			&.txt-pink
+				.table
+					border-bottom: 1px solid #a7a9ac	
+				.row
+					&:before
+						display: none 			
 	+r(565)
 		&__ttl
 			text-align: center
@@ -193,7 +220,7 @@
 	display: block
 	top: 19px
 	left: -115px
-	+r(1150)
+	+r(1300)
 		position: static
 		float: left
 		margin: 20px 30px 0 0
@@ -211,6 +238,27 @@
 	text-transform: uppercase
 	font-size: 15px
 	letter-spacing: 1.1px
+	&.is-checkout
+		width: 58%
+		padding-bottom: 35px 
+		text-transform: none
+		border-top: 0
+		+proxima
+		.txt-right
+			width: 67% 
+			padding-right: 18%
+		.row
+			&:last-child 
+				.cell
+					+proxima
+		.cell
+			&:first-child
+				color: #ed1970
+			p
+				padding: 3px 0
+				&:last-child
+					text-transform: uppercase
+					+proxima-b	 
 	.row
 		display: table-row
 		&:last-child
@@ -231,11 +279,20 @@
 		margin: 30px auto 0
 		padding-top: 15px
 		border-top: 2px solid #fff
+		&.is-checkout
+			padding-top: 0
+			.cell.txt-right
+				width: 60% 
+
 	+r(480)
 		width: 100%
 		.cell
 			&.txt-right
 				padding-right: 10%
+		&.is-checkout
+			width: 100%
+			.cell.txt-right
+				width: 55% 		
 
 //checkout
 .steps
@@ -250,6 +307,7 @@
 		+proxima-b
 	&__item
 		float: right
+		+clr
 		li
 			float: left
 			&:after
@@ -264,9 +322,26 @@
 					color: #A7AAAC
 			&.is-passed
 				color: #D1D3D4
-
+	+r(930)
+		&__ttl
+			float: none
+			margin-bottom: 10px
+		&__item
+			float: none
+			li
+				margin-bottom: 5px 
+	+r(480)
+		&__item
+			li
+				float: none			
+			 			
 .details
 	margin-top: 35px
+	+clr
+	&__add
+		+clr
+		&.with-margin
+			margin-bottom: 25px 
 	.is-pink
 		color: #ed1970
 	a
@@ -275,20 +350,97 @@
 		border-bottom: 2px solid #ed1970
 		+proxima-b
 		+clr
+	+r(930)
+		margin-top: 20px
+		font-size: 14px 
+		a
+			display: inline-block 
+			float: none
+			margin-bottom: 25px  
+		p
+			float: none
+			margin-bottom: 15px 
+		&__add
+			&.with-margin
+				margin-bottom: 0 	
 
 .table
 	&.checkout
 		width: 50%
 		margin-top: 5px
 		font-size: 16px
+		&.s-width
+			width: 25% 
+			padding-right: 10%
+			&:last-child
+				padding-right: 0 
 		&.m-width
-			width: 75%
+			width: 38%
+		&.l-width
+			width: 100% 	
+		&.with-radio
+			.cell
+				p
+					padding-left: 33px	
 		.cell
 			padding: 6px 0
+			vertical-align: top
 			&.m-pad
 				padding: 15px 0
-			p
-				padding-bottom: 5px
 			a
 				text-transform: uppercase
+	+r(930)
+		&.checkout
+			width: 75% 
+			font-size: 14px 	
+			&.m-width		
+				width: 50%
+	+r(720)
+		&.checkout
+			&.s-width
+				width: 50%
+				padding-right: 0 			
+	+r(565)
+		margin-bottom: 0 		
+		&.checkout
+			width: 50% 
+	+r(480)
+		&.checkout
+			.cell
+				padding: 6px 20px 6px 0	
+	+r(410)
+		&.checkout
+			width: 85% 
+			margin-bottom: 0
+			&.m-width,
+			&.s-width
+				width: 85% 
+				 						
+.terms
+	margin-top: 40px
+	label
+		display: block
+		margin-bottom: 10px 
+		padding-left: 33px 
+	+r(930)
+		font-size: 14px  
+	+r(565)
+		margin-top: 0 	
 
+.checkout__btn
+	margin-top: 72px
+	.btn
+		min-width: 275px
+		&:first-child
+			background: #f9fafa 
+			color: #ed1970
+			border-color: #ed1970 
+	+r(720)
+		.btn
+			min-width: inherit		
+	+r(480)
+		margin-top: 50px 
+		.btn
+			display: block 
+			float: none	
+			margin: 0 auto 10px 		 

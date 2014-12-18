@@ -31,16 +31,16 @@
 				</div>
 				<div class="details">
 					<p class="is-pink">Delivery options</p>
-					<div class="table checkout">
+					<div class="table checkout with-radio">
 						<div class="row">
 							<div class="cell">
-								<label class="radio"><input type="radio" name="delivery" value="Standard" checked><span class="radio__mode"></span>Standard: In 3-6 working days</label>
+								<label class="radio"><input type="radio" name="delivery" value="Standard" checked><span class="radio__mode"></span><p>Standard: In 3-6 working days</p></label>
 							</div>
 							<div class="cell">4.95 CAD</div>
 						</div>
 						<div class="row">
 							<div class="cell">
-								<label class="radio"><input type="radio" name="delivery" value="Express"><span class="radio__mode"></span>Express: In 2-3 working days</label>
+								<label class="radio"><input type="radio" name="delivery" value="Express"><span class="radio__mode"></span><p>Express: In 2-3 working days</p></label>
 							</div>
 							<div class="cell">9.95 CAD</div>
 						</div>
@@ -58,8 +58,8 @@
 					</ul>
 				</div>
 				<div class="details">
-					<a href="#" class="details__add onright">add new address</a>
-					<div class="table checkout m-width">
+					<div class="details__add"><a href="#" class="details__add onright">add new address</a></div>					
+					<div class="table checkout m-width with-radio onleft">
 						<div class="row">
 							<div class="cell">
 								<label class="radio">
@@ -71,6 +71,16 @@
 									<p>M6J 1C9</p>
 								</label>
 							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="table checkout m-width with-radio onleft">
+						<div class="row">
 							<div class="cell">
 								<label class="radio">
 									<input type="radio" name="shipping" value="Address 2"><span class="radio__mode"></span>
@@ -83,17 +93,15 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="cell m-pad">416.555.555</div>
-							<div class="cell m-pad">416.555.555</div>
+							<div class="cell m-pad"><p>416.555.555</p></div>
 						</div>
 						<div class="row">
-							<div class="cell m-pad"><a href="#">Edit</a></div>
-							<div class="cell m-pad"><a href="#">Edit</a></div>
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="content__bl">
+			<div class="content__bl s-margin">
 				<div class="steps">
 					<p class="steps__ttl">Step three: billing</p>
 					<ul class="steps__item">
@@ -104,11 +112,11 @@
 					</ul>
 				</div>
 				<div class="details">
-					<p class="is-pink">Payment Details</p>
 					<a href="#" class="details__add onright">add new payment</a>
-					<div class="table checkout m-width">
+					<div class="table checkout">
 						<div class="row">
 							<div class="cell">
+								<p class="is-pink">Payment Details</p>
 								<p>Visa</p>
 								<p>4520 0240 0090 XXXX</p>
 								<p>08/1</p>
@@ -116,9 +124,210 @@
 						</div>
 					</div>
 				</div>
+				<div class="details">
+					<div class="details__add with-margin">
+						<p class="is-pink onleft">Billing Address</p>
+						<a href="#" class="details__add onright">add new address</a>
+					</div>					
+					<div class="table checkout m-width onleft">
+						<div class="row">
+							<div class="cell">								
+								<p>John Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="table checkout m-width onleft">
+						<div class="row">
+							<div class="cell">								
+								<p>Jane Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+				</div>
+				<div class="terms">
+					<label class="check"><input type="checkbox" checked><span class="check__mode"></span>Billing address is the same as shipping address</label>
+					<label class="check"><input type="checkbox"><span class="check__mode"></span>I have read and accept the terms of purchase and privacy policy</label>
+				</div>
+			</div>
+			<div class="content__bl s-margin">
+				<div class="steps">
+					<p class="steps__ttl">Step four: finish</p>
+					<ul class="steps__item">
+						<li class="is-passed">Step One: Delivery</li>
+						<li class="is-passed">Step Two: Shipping</li>
+						<li class="is-passed">Step Three: Billing</li>
+						<li class="is-active">Step Four: Finish</li>
+					</ul>
+				</div>
+				<div class="details">
+					<div class="table checkout">
+						<div class="row">
+							<div class="cell">
+								<p class="is-pink">Payment Details</p>
+								<p>Visa</p>
+								<p>4520 0240 0090 XXXX</p>
+								<p>08/1</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="details">				
+					<div class="table checkout m-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Shipping Address</p>								
+								<p>John Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="table checkout s-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Billing Address</p>									
+								<p>Jane Doe</p>
+								<p>822 Richmond Street West</p>
+								<p>Suite 400</p>
+								<p>Toronto, ON</p>
+								<p>M6J 1C9</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p>416.555.555</p></div>
+						</div>
+						<div class="row">
+							<div class="cell m-pad"><p><a href="#">Edit</a></p></div>
+						</div>
+					</div>
+					<div class="table checkout s-width onleft">
+						<div class="row">
+							<div class="cell">
+								<p class="cell__ttl is-pink">Payment Details</p>
+								<p>Visa</p>
+								<p>4520 0240 0090 XXXX</p>
+								<p>08/1</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell">&nbsp;</div>
+						</div>
+						<div class="row">
+							<div class="cell">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+				<div class="content__item txt-pink">
+					<div class="table is-first">
+						<div class="row">
+							<p class="cell">Product</p>
+						</div>
+						<div class="row">
+							<p class="cell">RESTYLANE® LIPP™ 1ml</p>
+						</div>
+						<div class="row">
+							<p class="cell">RESTYLANE® LIPP™ 0.5ml</p>
+						</div>
+					</div>
+					<div class="table">
+						<div class="row">
+							<p class="cell">Price</p>
+						</div>
+						<div class="row">
+							<p class="cell">$219.00</p>
+						</div>
+						<div class="row">
+							<p class="cell">$189.00</p>
+						</div>
+					</div>
+					<div class="table">
+						<div class="row">
+							<p class="cell">Quantity</p>
+						</div>
+						<div class="row">
+							<p class="cell">11</p>
+						</div>
+						<div class="row">
+							<p class="cell">1</p>
+						</div>
+					</div>
+					<div class="table">
+						<div class="row">
+							<p class="cell">Amount</p>
+						</div>
+						<div class="row">
+							<p class="cell">2409.00 CAD</p>
+						</div>
+						<div class="row">
+							<p class="cell">189.00 CAD</p>
+						</div>
+					</div>
+					<div class="total is-checkout onright">
+						<div class="row">
+							<div class="cell txt-right">
+								<p>Total Products</p>
+								<p>Discount</p>
+								<p>Standard Shipping</p>
+								<p>Subtotal</p>
+							</div>
+							<div class="cell">
+								<p>2598.00 CAD</p>
+								<p>0.00 CAD</p>
+								<p>4.95 CAD</p>
+								<p>2603.95 CAD</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell txt-right">
+								<p>HST/TVH 13.00%</p>
+								<p>HST/TVH 12.96%</p>
+								<p>Total Tax</p>
+								<p>Total</p>
+							</div>
+							<div class="cell">
+								<p>338.51 CAD</p>
+								<p>337.47 CAD</p>
+								<p>675.98 CAD</p>
+								<p>3279.93 CAD</p>
+							</div>
+						</div>
+					</div>
+				</div>				
+				<div class="checkout__btn">
+					<button class="btn is-pink onleft" type="button">Back to cart</button>
+					<button class="btn is-pink onright" type="submit">Complete order</button>
+				</div>
 			</div>
 		</div>
-		<div class="nav is-grey">
+		<div class="nav is-grey is-inner">
 			<div class="nav__top">
 				<a class="js-menu" href="#">
 					<i class="nav_ico icon"></i>
@@ -148,7 +357,7 @@
 				<a href="#"><i class="cost_ico icon"></i></a>
 			</div>
 		</div>
-		<div class="info is-grey">
+		<div class="info is-grey is-inner">
 			<a href="#"><i class="info_ico icon"></i></a>
 			<a href="#"><i class="cost_ico icon"></i></a>
 		</div>

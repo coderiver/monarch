@@ -72,7 +72,7 @@ body
 	float: right
 
 .overlay
-	display: none //TODO OVERLAY ONLY ON MOBILE? MAKE SOME SWIPE?
+	display: none 
 	position: fixed
 	top: 0
 	left: 0
@@ -160,12 +160,15 @@ body
 		vertical-align: middle
 		&.txt-right
 			text-align: right
+		&__ttl
+			margin-bottom: 35px 	
 
 .radio
+	display: block 
 	position: relative
 	input
 		position: absolute
-		left: -25px
+		left: 0
 		z-index: 2
 		opacity: 0
 		&:checked
@@ -176,7 +179,7 @@ body
 .radio__mode
 	position: absolute
 	top: -3px
-	left: -33px
+	left: 0
 	width: 20px
 	height: 20px
 	border: 1px solid #bcbdc0
@@ -193,7 +196,37 @@ body
 		background: #ed1970
 		z-index: 2
 
+.check
+	position: relative
+	input
+		position: absolute
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			+ .check__mode
+				background: #ed1970
+				border-color: #ed1970 
+				&:after
+					display: block
 
+.check__mode
+	position: absolute
+	top: -3px
+	left: 0
+	width: 20px
+	height: 20px
+	border: 1px solid #bcbdc0
+	z-index: 1
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -5px 0 0 -5px
+		z-index: 2
+		+s(checked)
 
 
 
