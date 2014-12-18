@@ -2,12 +2,20 @@ head.ready(function() {
 
 	//menu
 	$('.js-menu').click(function() {
+		$('body').addClass('menu-opened');
 		$('.menu').addClass('is-active');
+		$('.js-overlay').css('display', 'block');
+
+		if ($('body').hasClass('index')){
+			$('body').css('padding-right', '0');
+		};
 		return false;
 	});
 
 	$('.js-close').click(function() {
+		$('body').removeClass('menu-opened');
 		$('.menu').removeClass('is-active');
+		$('.js-overlay').css('display', 'none');
 		return false;
 	});
 

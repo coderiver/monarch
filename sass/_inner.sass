@@ -12,6 +12,11 @@
 		max-width: 890px
 	&.m-width
 		max-width: 935px
+	&.l-width
+		max-width: 1118px
+		padding: 223px 20px 15px
+		font-size: 16px
+		letter-spacing: 1px
 	&.txt-white
 		color: #FFF
 	&__ttl
@@ -23,12 +28,6 @@
 		+quad
 		&.is-white
 			color: #FFF
-	.ttl_ico
-		content: ""
-		position: absolute
-		display: block
-		top: 19px
-		left: -115px
 	&__img
 		background: #fff
 		width: 242px
@@ -41,6 +40,8 @@
 	&__bl
 		margin-bottom: 25px
 		+clr
+		&.m-margin
+			margin-bottom: 70px
 		.table
 			width: 242px
 			font-size: 13px
@@ -53,7 +54,7 @@
 			font-size: 15px
 			letter-spacing: 1.1px
 		.table
-			display: table-cell 
+			display: table-cell
 			font-size: 15px
 			border-top: 2px solid #fff
 			border-bottom: 2px solid #fff
@@ -61,16 +62,16 @@
 				width: 42%
 			&.is-last
 				.cell
-					padding: 20px 0	
+					padding: 20px 0
 			&.txt-right
-				text-align: right	
+				text-align: right
 			.row
 				&:first-child
 					text-transform: uppercase
 			.cell
 				padding: 22px 0
 				&.txt-up
-					text-transform: uppercase				
+					text-transform: uppercase
 		.trash_ico
 			padding-right: 10px
 	&__name
@@ -125,79 +126,42 @@
 				&:first-child
 					width: 21%
 					color: #ed1970
-	.total
-		display: table 
-		margin-top: 30px
-		width: 32%
-		text-transform: uppercase
-		font-size: 15px 
-		letter-spacing: 1.1px
-		.row
-			display: table-row 
-			&:last-child
-				.cell
-					padding-top: 25px
-					+proxima-b
-		.cell
-			display: table-cell 
-			padding: 5px 0
-			&.txt-right
-				text-align: right
-				padding-right: 20%				
 	+r(1150)
 		&__ttl
 			p
 				overflow: hidden
-		.ttl_ico
-			position: static
-			float: left
-			margin: 20px 30px 0 0
 	+r(930)
 		&__item
-			.table	
-				font-size: 13px  
-		.total
-			font-size: 13px 		
+			.table
+				font-size: 13px
 	+r(720)
-		.ttl_ico
-			display: none
 		.table__ttl
 			text-align: center
 		&__input
 			float: none
 			margin: 0 0 20px 0
 		&__item
-			.table	
+			.table
 				display: block
-				width: 50% 
+				width: 50%
 				margin: 0 auto
 				padding: 0 5%
-				text-align: center	
-				border-bottom: 0 
+				text-align: center
+				border-bottom: 0
 				box-sizing: border-box
 				&.is-first
 					width: 50%
 				&.txt-right
-					text-align: center	
+					text-align: center
 				.row
-					display: block 	 
+					display: block
 				.cell
-					display: block 
+					display: block
 					padding: 15px 0
-		.total
-			float: none
-			width: 50%
-			margin: 30px auto 0
-			padding-top: 15px
-			border-top: 2px solid #fff	
 	+r(565)
 		&__ttl
 			text-align: center
 			font-size: 37px
-		.ttl_ico
-			display: block
-			float: none
-			margin: 0 auto 10px
 		&__bl
 			div
 				float: none
@@ -214,21 +178,117 @@
 		&__btn
 			.btn
 				margin: 0 auto
-	+r(480)		
+	+r(480)
 		&__item
 			.table
-				width: 100% 
+				width: 100%
 				&.is-first
-					width: 100% 
-		.total
-			width: 100% 	
-			.cell
-				&.txt-right
-					padding-right: 10% 		
+					width: 100%
 		.btn
-			float: none			
+			float: none
 
+.ttl_ico
+	content: ""
+	position: absolute
+	display: block
+	top: 19px
+	left: -115px
+	+r(1150)
+		position: static
+		float: left
+		margin: 20px 30px 0 0
+	+r(720)
+		display: none
+	+r(565)
+		display: block
+		float: none
+		margin: 0 auto 10px
 
+.total
+	display: table
+	margin-top: 30px
+	width: 32%
+	text-transform: uppercase
+	font-size: 15px
+	letter-spacing: 1.1px
+	.row
+		display: table-row
+		&:last-child
+			.cell
+				padding-top: 25px
+				+proxima-b
+	.cell
+		display: table-cell
+		padding: 5px 0
+		&.txt-right
+			text-align: right
+			padding-right: 20%
+	+r(930)
+		font-size: 13px
+	+r(720)
+		float: none
+		width: 50%
+		margin: 30px auto 0
+		padding-top: 15px
+		border-top: 2px solid #fff
+	+r(480)
+		width: 100%
+		.cell
+			&.txt-right
+				padding-right: 10%
 
+//checkout
+.steps
+	padding-bottom: 10px
+	border-bottom: 1px solid #ed1970
+	+proxima
+	+clr
+	&__ttl
+		float: left
+		text-transform: uppercase
+		color: #ed1970
+		+proxima-b
+	&__item
+		float: right
+		li
+			float: left
+			&:after
+				content: "\003e"
+				padding: 0 10px
+			&:last-child
+				&:after
+					display: none
+			&.is-active
+				color: #ed1970
+				&:after
+					color: #A7AAAC
+			&.is-passed
+				color: #D1D3D4
 
+.details
+	margin-top: 35px
+	.is-pink
+		color: #ed1970
+	a
+		color: #ed1970
+		text-decoration: none
+		border-bottom: 2px solid #ed1970
+		+proxima-b
+		+clr
+
+.table
+	&.checkout
+		width: 50%
+		margin-top: 5px
+		font-size: 16px
+		&.m-width
+			width: 75%
+		.cell
+			padding: 6px 0
+			&.m-pad
+				padding: 15px 0
+			p
+				padding-bottom: 5px
+			a
+				text-transform: uppercase
 

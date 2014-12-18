@@ -57,6 +57,9 @@ body
 	line-height: 1.4
 	&.is-white
 		background: #f9fafa
+	&.menu-opened
+		overflow: hidden
+		padding-right: 17px
 
 .out
 	min-width: 320px
@@ -68,8 +71,15 @@ body
 .onright
 	float: right
 
-.is-hidden
-	display: none
+.overlay
+	display: none //TODO OVERLAY ONLY ON MOBILE? MAKE SOME SWIPE?
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0, 0.5)
+	z-index: 1
 
 // fonts
 +font(Quadon-Light, Quadon-Light)
@@ -149,8 +159,39 @@ body
 		padding: 2px 0
 		vertical-align: middle
 		&.txt-right
-			text-align: right	
+			text-align: right
 
+.radio
+	position: relative
+	input
+		position: absolute
+		left: -25px
+		z-index: 2
+		opacity: 0
+		&:checked
+			+ .radio__mode
+				&:after
+					display: block
+
+.radio__mode
+	position: absolute
+	top: -3px
+	left: -33px
+	width: 20px
+	height: 20px
+	border: 1px solid #bcbdc0
+	z-index: 1
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 10px
+		height: 10px
+		margin: -5px 0 0 -5px
+		background: #ed1970
+		z-index: 2
 
 
 

@@ -13,17 +13,6 @@
 		text-align: left
 	+r(1024)
 		height: auto
-		// &.is-fixed //TODO OVERLAY ON MOBILE WHEN MENU IS OPENED
-		// 	position: fixed
-		// 	&:after
-		// 		content: ""
-		// 		position: absolute
-		// 		display: block
-		// 		top: 0
-		// 		left: 0
-		// 		right: 0
-		// 		bottom: 0
-		// 		background: rgba(0,0,0, 0.5)
 
 .inside
 	display: inline-block
@@ -167,7 +156,7 @@
 		+arr(20, 42, #fff, r)
 
 .menu
-	position: fixed // TODO JUMPING IN Chrome, WTF?
+	position: fixed
 	top: 0
 	right: 0
 	bottom: 0
@@ -176,7 +165,7 @@
 	background: #fff
 	text-align: center
 	font-size: 16px
-	z-index: 2
+	z-index: 3
 	box-sizing: border-box
 	overflow: auto
 	+transition(transform 0.3s)
@@ -236,6 +225,8 @@
 			margin-left: 2px
 	.is-semibold
 		+proxima-sb
+	+r(480)
+		width: 100%
 
 .info
 	position: fixed
